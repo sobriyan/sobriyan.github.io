@@ -5,26 +5,76 @@
   <title>Sobriya's Library</title>
   </head>
 
-
-  
-<h1 style="text-align: center;">Introduction</h1>
-  <h3 style="text-align: center;">Welcome to Sobriya's Library! This website contains book recommendations and resources for your reading. Happy exploring!</h3>
-
-  
-
-<body style:"background-color:EBE6CA;">
-<img src="https://plus.unsplash.com/premium_photo-1677187301660-5e557d9c0724?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3N8ZW58MHx8MHx8fDA%3D" width=200 height=300 alt="Stacked Books" class="center">
-
-
-<--!tab links-->
-  <div class:"tab">
+ <div class:"tab">
     <button class="tablinks" onclick="openBook(event,'Fiction')">Fiction</button>
     <button class="tablinks" onclick="openBook(event,'Nonfiction')">Fiction</button>
     <button class="tablinks" onclick="openBook(event,'Resources')">Fiction</button>
   </div>
 
 
-<--!tab content-->
+{box-sizing: border-box}
+  .tab {
+  float:left;
+  border:1px solid #ccc
+  background-color: #daadba;
+  width: 30%;
+  height: 300px;
+  }
+  .tab button {
+  display:block;
+  background-color:inherit;
+  color:black;
+  padding: 22px 16px;
+  width: 100%;
+  border: none;
+  outline: none;
+  text-align: left;
+  cursor: pointer;
+  transition: 0.3s;
+  }
+  .tab button:hover {
+  background-color: #ddd;
+  }
+  .tab button.active {
+  background-color: #ccc;
+  }
+  .tabcontent {
+  float: left;
+  pading: 0px 12px;
+  border: 1px solid #ccc;
+  width: 70%;
+  border-left: none;
+  height: 300px;
+  }
+
+
+  function openBook(evt, Fiction) {
+  var i, tabcontent, tablinks;
+  tabcontent = 
+  document.getElementsByClassName("tabcontent");
+  for (i = 0; i < tabcontent.length; i++) {tabcontent[i].style.display = "none";
+  }
+
+  tablinks = 
+    document.getElementsByClassName("tablinks");
+    for (i = 0; i < tablinks.length; i++) {tablinks[i].className.replace("active","");}
+
+      document.getElementById(Fiction).style.display = "block";
+      evt.currentTarget.className += "active";}
+  
+  
+  
+  
+<h1 style="text-align: center;">Introduction</h1>
+  <h3 style="text-align: center;">Welcome to Sobriya's Library! This website contains book recommendations and resources for your reading. Happy exploring!</h3>
+
+  
+
+<body style:"background-color:#f1e4e0;">
+<img src="https://plus.unsplash.com/premium_photo-1677187301660-5e557d9c0724?w=800&auto=format&fit=crop&q=60&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8NXx8Ym9va3N8ZW58MHx8MHx8fDA%3D" width=200 height=300 alt="Stacked Books" class="center">
+
+
+
 <div id="Fiction" class="tabcontent">
 <h1 style="text-align: center;">Fiction Book Recommendations</h1>
   <ul style="font-size: 26px">
